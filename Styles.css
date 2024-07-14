@@ -1,0 +1,341 @@
+/* Basic styling for the body and elements */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(90deg, #ff6f61, #d53369);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 5px 0;
+    color: #ffe6e1;
+}
+
+header button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #004da2;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    margin: 20px 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #0066cc;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+section h3:hover {
+    color: #004da2;
+}
+
+section ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+section ul li {
+    margin: 5px 0;
+}
+
+section img {
+    display: none; /* Hide by default */
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1199px) {
+    section img {
+        display: block; /* Show on smaller screens */
+    }
+}
+
+/* Floating course section styles */
+.floating-course {
+    display: none; /* Hide by default on smaller screens */
+}
+
+@media (min-width: 1200px) {
+    .floating-course {
+        display: block; /* Show on larger screens */
+        position: fixed;
+        top: 128px;
+        right: 0px;
+        width: 296px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 16px;
+    }
+
+    /* Additional styles for floating course widget */
+    .floating-course .course-preview {
+        position: relative;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .floating-course .course-thumbnail {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .floating-course .preview-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .floating-course .course-details {
+        padding: 16px;
+    }
+
+    .floating-course .pricing {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .floating-course .current-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e53e3e;
+        margin-right: 8px;
+    }
+
+    .floating-course .cp {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+        margin-right: 8px;
+    }
+
+    .floating-course .original-price {
+        font-size: 16px;
+        text-decoration: line-through;
+        color: #999;
+        margin-right: 8px;
+    }
+
+    .floating-course .discount {
+        font-size: 16px;
+        color: #38a169;
+    }
+
+    .floating-course .timer {
+        color: #150808;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .floating-course .add-to-cart {
+        background-color: #03000c;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 16px;
+    }
+
+    .floating-course .add-to-cart:hover {
+        background-color: #000000;
+    }
+
+    .floating-course .guarantee {
+        color: #555;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* Additional section for mobile and tablet view */
+.purchase-section {
+    display: none; /* Hide by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .purchase-section {
+        display: block; /* Show on smaller screens */
+    }
+}
+
+/* Floating course widget */
+#floating-course-widget {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Initially hide the widget */
+}
+
+#floating-course-widget img {
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+#floating-course-widget h3 {
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#floating-course-widget p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+#floating-course-widget button {
+    padding: 8px 26px;
+    font-size: 0.9em;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 12px;
+}
+
+#floating-course-widget button:hover {
+    background-color: #004da2;
+}
+
+/* Media query for screens smaller than 1200px */
+@media (max-width: 1199px) {
+    #floating-course-widget {
+        display: block; /* Show the widget */
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #0066cc;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    display: none; /* Hide by default */
+}
+
+@media (min-width: 1200px) {
+    footer {
+        display: block; /* Show on larger screens */
+    }
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer button:hover {
+    background-color: #d53369;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #d53369;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+    .spacer {
+        display: none;
+    }
+}
+
+
